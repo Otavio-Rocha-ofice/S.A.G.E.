@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="./Estilos-Telas/style.css">
+
+</head>
+<body>
+
+    <div id="barra-container"></div>
+
+    <script>
+
+        fetch('../Componentes/Barra.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('barra-container').innerHTML = data;
+
+            document.getElementById('config')
+            .classList.add('active');
+
+        });
+
+    </script>
+
+</body>
+</html>
